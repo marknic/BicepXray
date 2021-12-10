@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Bicep.LanguageServer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bicep.Core\Bicep.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OmniSharp.Extensions.LanguageServer" Version="0.19.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="./Snippets/Templates/*.bicep" LogicalName="$([System.String]::new('Snippets/Templates/%(RecursiveDir)%(Filename)%(Extension)').Replace('\', '/'))" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LangServerResources.Designer.cs">
+      <DependentUpon>LangServerResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="LangServerResources.resx">
+      <LastGenOutput>LangServerResources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

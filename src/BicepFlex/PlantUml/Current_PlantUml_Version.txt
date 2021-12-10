@@ -1,0 +1,7 @@
+﻿1.2021.15
+
+Verify latest release:
+https://github.com/plantuml/plantuml/releases
+
+Current Release:
+https://github.com/plantuml/plantuml/releases/tag/v1.2021.15

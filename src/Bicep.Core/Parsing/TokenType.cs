@@ -1,0 +1,53 @@
+// Copyright (c) Mark Nichols.  All Rights Reserved. 
+//  Licensed under the MIT License.
+
+namespace Bicep.Core.Parsing
+{
+    public enum TokenType
+    {
+        At,
+        Unrecognized,
+        LeftBrace,
+        RightBrace,
+        LeftParen,
+        RightParen,
+        LeftSquare,
+        RightSquare,
+        Comma,
+        Dot,
+        Question,
+        Colon,
+        Semicolon,
+        Assignment,
+        Plus,
+        Minus,
+        Asterisk,
+        Slash,
+        Modulo,
+        Exclamation,
+        LessThan,
+        GreaterThan,
+        LessThanOrEqual,
+        GreaterThanOrEqual,
+        Equals,
+        NotEquals,
+        EqualsInsensitive,
+        NotEqualsInsensitive,
+        LogicalAnd,
+        LogicalOr,
+        Identifier,
+        StringLeftPiece,
+        StringMiddlePiece,
+        StringRightPiece,
+        StringComplete,
+        MultilineString,
+        Integer,
+        TrueKeyword,
+        FalseKeyword,
+        NullKeyword,
+        NewLine,
+        EndOfFile,
+        DoubleQuestion,
+        DoubleColon,
+    }
+}

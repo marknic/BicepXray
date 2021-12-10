@@ -1,0 +1,15 @@
+# project config
+/.vscode
+/.gitignore
+
+# source files
+/src
+/node_modules
+/*.js
+/*.ts
+/tsconfig.json
+/tsconfig.e2e.json
+
+# links for the extension readme (https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
+# These are converted into github.com links, and not bundled with the extension
+/readme-links

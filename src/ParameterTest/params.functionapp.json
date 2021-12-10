@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "tags": {
+      "value": {
+        "DeptName": "Innovation",
+        "LOB": "Innovation",
+        "EntType": "dev",
+        "DeployDate": "01/01/1970",
+        "Deployer": "Mark Nichols",
+        "Sensitivity": "NonSensitive",
+        "SenType": "Not Applicable",
+        "SubDivision": "Innovation",
+        "Department": "Innovation",
+        "CostCenter": "IT Innovation 1234",
+        "CostCode": "1234567890"
+      }
+    },
+    "prefix": {
+      "value": "mn"
+    },
+    "suffix": {
+      "value": "01"
+    },
+    "appName": {
+      "value": "privatefunc"
+    },
+    "subscriptionId": {
+      "value": "e752c181-7a2c-4de5-b16b-b3288ed54e42"
+    },
+    "resourceGroupName": {
+      "value": "Functions-In-A-Vnet-RG"
+    },
+    "slotName": {
+      "value": "staging"
+    },
+    "appEnvironment": {
+      "value": "Dev"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "functionAppScaleLimit": {
+      "value": 10
+    },
+    "minimumElasticInstanceCount": {
+      "value": 3
+    },
+    "functionSubnetName": {
+      "value": "sn-func-3-0-27-d"
+    },
+    "isLinux": {
+      "value": false
+    }
+  }
+}
