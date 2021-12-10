@@ -28,11 +28,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bicep.LangServer.Integratio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bicep.LangServer.UnitTests", "src\Bicep.LangServer.UnitTests\Bicep.LangServer.UnitTests.csproj", "{803B347C-DDAD-40FE-917E-AB1475F106D1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BicepBrace", "BicepBrace", "{EF2B23B7-470D-4251-82DB-7C98387B9AA6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BicepExtensions", "BicepExtensions", "{EF2B23B7-470D-4251-82DB-7C98387B9AA6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BicepFlex", "src\BicepFlex\BicepFlex.csproj", "{B09CE3D3-6515-4F8E-AC07-5E302DF767B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParameterTest", "src\ParameterTest\ParameterTest.csproj", "{6E1B3E77-7BDA-445F-9E8B-526EAF15C3FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParameterTest", "src\ParameterTest\ParameterTest.csproj", "{6E1B3E77-7BDA-445F-9E8B-526EAF15C3FF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vscode-bicep", "vscode-bicep", "{0858094D-9D6B-4818-AB32-FB13EA96C32D}"
 	ProjectSection(SolutionItems) = preProject
