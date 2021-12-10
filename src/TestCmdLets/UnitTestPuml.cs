@@ -11,7 +11,7 @@ using System.IO;
 namespace TestCmdLets
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestPuml
     {
         [TestMethod]
         public void WhenFilePathIsEmptyOrNull_ThenShouldFail()
@@ -56,8 +56,8 @@ namespace TestCmdLets
 
                 XrayProcessor.DoXray(templateFile);
 
-                var fileListPuml = Directory.GetFiles(Path.Combine(runDir, "*.puml"));
-                var fileListPng = Directory.GetFiles(Path.Combine(runDir, "*.png"));
+                var fileListPuml = Directory.GetFiles(runDir, "*.puml");
+                var fileListPng = Directory.GetFiles(runDir, "*.png");
 
                 Assert.IsTrue(fileListPuml.Length > 0);
                 Assert.IsTrue(fileListPng.Length > 0);
@@ -126,7 +126,5 @@ namespace TestCmdLets
                 Assert.Fail();
             }
         }
-
-       
     }
 }

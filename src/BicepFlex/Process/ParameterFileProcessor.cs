@@ -15,9 +15,6 @@ namespace BicepFlex.Process
 {
     public static class ParameterFileProcessor
     {
-        //const string SchemaValue = "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#";
-        //const string ContentVersion = "1.0.0.0";
-
         public static string Process(ParameterFileInfo parameterFileInfo)
         {
             string? outputParameterFile;
@@ -28,7 +25,13 @@ namespace BicepFlex.Process
             var templateFileName = parameterFileInfo.BicepTemplateFile; // "vnet.bicep";
             var parameterFileName = parameterFileInfo.MainParameterFile; //  @"params.main.json";
 
-            var templateParameters = BicepDecoder.DecodeTemplate(templateFileName).Parameters;
+            if (!File.Exists(templateFileName))
+            {
+                throw new Exception($"Cannot find template file: {templateFileName}");
+            }
+
+            var decodedTemplate = BicepDecoder.DecodeTemplate(templateFileName);
+            var templateParameters = decodedTemplate.Parameters;
 
             var parameterFileObject = JObject.Parse(File.ReadAllText(parameterFileName));
             var parametersInFile = parameterFileObject["parameters"];
@@ -182,6 +185,15 @@ namespace BicepFlex.Process
             }
 
             var parameterFileSerialized = JsonConvert.SerializeObject(parameterFileObject);
+
+            if (parameterFileInfo != null)
+            {
+                if (parameterFileInfo.OutputParameterFile != null)
+                {
+                    var parmFilePath = Path.GetFullPath(parameterFileInfo.OutputParameterFile);
+                    File.WriteAllText(parmFilePath, parameterFileSerialized);
+                }
+            }
 
             return parameterFileSerialized;
         }

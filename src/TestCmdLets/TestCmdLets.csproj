@@ -18,4 +18,19 @@
     <ProjectReference Include="..\BicepFlex\BicepFlex.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="params.main.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="params.master.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="vnet.bicep">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="vnet2.bicep">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
